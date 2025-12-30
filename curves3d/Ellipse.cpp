@@ -5,10 +5,14 @@ Ellipse::Ellipse(int64_t id, const string& name, float x, float y, float z, floa
 
 vector<float> Ellipse::firstDerivative(float t) const
 {
-    return vector<float>();
+	float x_ = -major_radius * sin(t);
+	float y_ = minor_radius * cos(t);
+	return vector<float>{x_, y_, 0};
 }
 
 vector<float> Ellipse::getPoint(float t) const
 {
-    return vector<float>();
+	float x_ = x + major_radius * cos(t);
+	float y_ = y + minor_radius * sin(t);
+    return vector<float>{x_, y_, z};
 }

@@ -17,7 +17,6 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 		cerr << "failed read size!\n";
 		return result;
 	}
-	std::cout << "DBG: size=" << size << "\n";
 
 	for (int i = 0; i < size; i++)
 	{
@@ -30,7 +29,6 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 			cerr << "failed read record header at i=" << i << "\n";
 			break;
 		}
-		std::cout << "DBG: type=" << type << " id=" << id << " name=" << name << " x=" << x << " y=" << y << " z=" << z;
 
 		switch (type)
 		{
@@ -40,7 +38,6 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				cerr << "failed read C radius at i=" << i << "\n";
 				break;
 			}
-			std::cout << " radius=" << radius << "\n";
 			result.push_back(std::unique_ptr<IShape>(new Circle(id,name,x,y,z,radius)));
 			break;
 		}
@@ -50,7 +47,6 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				cerr << "failed read E params at i=" << i << "\n";
 				break;
 			}
-			std::cout << " minor radius=" << minor_radius << " major radius=" << major_radius << "\n";
 			result.push_back(std::unique_ptr<IShape>(new Ellipse(id, name, x, y, z, minor_radius, major_radius)));
 			break;
 		}
@@ -60,7 +56,6 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				cerr << "failed read H params at i=" << i << "\n";
 				break;
 			}
-			std::cout << " radius=" << radius << " step_for_helix=" << step_for_helix << "\n";
 			result.push_back(std::unique_ptr<IShape>(new Helix(id, name, x, y, z, radius, step_for_helix)));
 			break;
 		}

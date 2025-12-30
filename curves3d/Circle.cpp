@@ -5,10 +5,14 @@ Circle::Circle(int64_t id, const string& name, float x, float y, float z, float 
 
 vector<float> Circle::firstDerivative(float t) const
 {
-	return vector<float>();
+	float x_ = -radius * sin(t);
+	float y_ = radius * cos(t);
+	return vector<float>{x_, y_, 0};
 }
 
 vector<float> Circle::getPoint(float t) const
 {
-	return vector<float>();
+	float x_ = x + radius * cos(t);
+	float y_ = y + radius * sin(t);
+	return vector<float>{x_, y_, z};
 }
