@@ -10,6 +10,7 @@ private:
 	float radius;
 	float step;
 public:
+	Helix(int64_t id, const string& name, float x, float y, float z, float radius, float step);
 	vector<float> firstDerivative(float t) const override;
 	vector<float> getPoint(float t) const override;
 };

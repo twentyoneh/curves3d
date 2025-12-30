@@ -10,6 +10,8 @@ protected:
 	float x, y, z;
 
 public:
+	IShape(int64_t id, const std::string& name, float x, float y, float z)
+		: id(id), name(name), x(x), y(y), z(z) { }
 	virtual std::vector<float> firstDerivative(float t) const;
 	virtual std::vector<float> getPoint(float t) const;
 	
