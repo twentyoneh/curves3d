@@ -6,7 +6,6 @@ int main()
 	FileReader fr;
 
     auto curves = fr.readFromFile("../curves_to_check.txt");
-
     for (const auto& c : curves) {
 		std::vector<float>point = c->getPoint(t);
         std::vector<float>derivative = c->firstDerivative(t);

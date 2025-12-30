@@ -38,6 +38,8 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				cerr << "failed read C radius at i=" << i << "\n";
 				break;
 			}
+			if (radius <= 0)
+				break;
 			result.push_back(std::unique_ptr<IShape>(new Circle(id,name,x,y,z,radius)));
 			break;
 		}
@@ -47,6 +49,8 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				cerr << "failed read E params at i=" << i << "\n";
 				break;
 			}
+			if (minor_radius <= 0 || major_radius <= 0)
+				break;
 			result.push_back(std::unique_ptr<IShape>(new Ellipse(id, name, x, y, z, minor_radius, major_radius)));
 			break;
 		}
@@ -56,6 +60,8 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				cerr << "failed read H params at i=" << i << "\n";
 				break;
 			}
+			if (radius <= 0 || step_for_helix <= 0)
+				break;
 			result.push_back(std::unique_ptr<IShape>(new Helix(id, name, x, y, z, radius, step_for_helix)));
 			break;
 		}
