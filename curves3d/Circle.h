@@ -5,7 +5,7 @@ using namespace std;
 
 //C(t) = (x0 + R cos(t), y0 + R sin(t), z0)
 //C'(t) = (-R sin(t), R cos(t), 0)
-class Circle : IShape
+class Circle : public IShape
 {
 private:
 	float radius;

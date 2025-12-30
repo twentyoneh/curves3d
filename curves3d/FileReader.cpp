@@ -19,7 +19,6 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 	}
 	std::cout << "DBG: size=" << size << "\n";
 
-	//Îáðàáîòêà âñåãî ÷òî åñòü â ôàéëå
 	for (int i = 0; i < size; i++)
 	{
 		char type;
@@ -42,7 +41,7 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				break;
 			}
 			std::cout << " radius=" << radius << "\n";
-			//TODO:Добавить Circle
+			result.push_back(std::unique_ptr<IShape>(new Circle(id,name,x,y,z,radius)));
 			break;
 		}
 		case 'E': {
@@ -52,7 +51,7 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				break;
 			}
 			std::cout << " minor radius=" << minor_radius << " major radius=" << major_radius << "\n";
-			//TODO:Добавить Ellipse
+			result.push_back(std::unique_ptr<IShape>(new Ellipse(id, name, x, y, z, minor_radius, major_radius)));
 			break;
 		}
 		case 'H': {
@@ -62,7 +61,7 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				break;
 			}
 			std::cout << " radius=" << radius << " step_for_helix=" << step_for_helix << "\n";
-			//TODO:Добавить Helix
+			result.push_back(std::unique_ptr<IShape>(new Helix(id, name, x, y, z, radius, step_for_helix)));
 			break;
 		}
 		default:

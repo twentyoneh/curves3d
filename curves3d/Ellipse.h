@@ -4,7 +4,7 @@
 using namespace std;
 //C(t) = (x0 + a * cos(t), y0 + b * sin(t))
 //C'(t) = (-a * sin(t), b * cos(t))
-class Ellipse : IShape
+class Ellipse : public IShape
 {
 private:
 	float minor_radius;

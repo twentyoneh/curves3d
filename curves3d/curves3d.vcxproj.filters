@@ -30,6 +30,9 @@
     <ClCompile Include="Helix.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="IShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="IShape.h">

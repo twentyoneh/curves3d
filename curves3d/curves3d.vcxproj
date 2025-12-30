@@ -127,6 +127,7 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="Helix.cpp" />
+    <ClCompile Include="IShape.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="FileReader.cpp" />
   </ItemGroup>

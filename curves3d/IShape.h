@@ -10,16 +10,11 @@ protected:
 	float x, y, z;
 
 public:
-	IShape(int64_t id, const std::string& name, float x, float y, float z)
-		: id(id), name(name), x(x), y(y), z(z) { }
-	virtual std::vector<float> firstDerivative(float t) const;
-	virtual std::vector<float> getPoint(float t) const;
+	IShape(int64_t id, const std::string& name, float x, float y, float z);
+	virtual std::vector<float> firstDerivative(float t) const = 0;
+	virtual std::vector<float> getPoint(float t) const = 0;
 	
-	string getName() const {
-		return name;
-	}
-	int64_t getId() const {
-		return id;
-	}
+	std::string getName() const;
+	int64_t getId() const;
 };
 

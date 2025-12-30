@@ -5,6 +5,9 @@
 #include <vector>
 #include <iomanip>
 #include "IShape.h"
+#include "Circle.h"
+#include "Ellipse.h"
+#include "Helix.h"
 using namespace std;
 
 class FileReader
