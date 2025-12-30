@@ -7,3 +7,4 @@ ID=666000111 name=nut_thread Point(PI/4)=(6.62132, -0.678679, 10.5) Derivative(P
 Sotred circles vector: 
 ID=111000111 name=wheel_flange radius=1
 ID=444000111 name=pitch_sign radius=5
+Sum of the radii = 6
