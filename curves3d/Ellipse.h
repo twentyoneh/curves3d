@@ -1,6 +1,7 @@
 #pragma once
 #include "IShape.h"
 #include <vector>
+#include <cmath>
 using namespace std;
 //C(t) = (x0 + a * cos(t), y0 + b * sin(t))
 //C'(t) = (-a * sin(t), b * cos(t))

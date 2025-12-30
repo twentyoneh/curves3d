@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <iomanip>
+#include <memory>
 #include "IShape.h"
 #include "Circle.h"
 #include "Ellipse.h"

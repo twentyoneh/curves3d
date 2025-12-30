@@ -11,6 +11,7 @@ int main(int argc, char* argv[])
 
     const char* path = argv[1];
 	FileReader fr;
+    const float t = 3.141593f / 4;
 
     auto curves = fr.readFromFile(path);
     for (const auto& c : curves) {
@@ -49,7 +50,7 @@ int main(int argc, char* argv[])
     }
     
     float sum = 0;
-    for (int i = 0; i < circles.size(); i++)
+    for (size_t i = 0; i < circles.size(); i++)
     {
         sum += circles[i]->getRadius();
     }

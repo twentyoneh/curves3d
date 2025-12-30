@@ -1,5 +1,6 @@
 #pragma once
 #include "IShape.h"
+#include <cmath>
 using namespace std;
 
 //C(t) = (x0 + R cos(t), y0 + R sin(t), z0 + (step_for_helix * t) / (2 * pi))
