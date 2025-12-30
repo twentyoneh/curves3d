@@ -1,4 +1,4 @@
-#include "FileReader.h"
+п»ї#include "FileReader.h"
 
 vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 {
@@ -19,7 +19,7 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 	}
 	std::cout << "DBG: size=" << size << "\n";
 
-	//Обработка всего что есть в файле
+	//ГЋГЎГ°Г ГЎГ®ГІГЄГ  ГўГ±ГҐГЈГ® Г·ГІГ® ГҐГ±ГІГј Гў ГґГ Г©Г«ГҐ
 	for (int i = 0; i < size; i++)
 	{
 		char type;
@@ -42,7 +42,7 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				break;
 			}
 			std::cout << " radius=" << radius << "\n";
-			//TODO:Засунуть в результирующий вектор Circle
+			//TODO:Р”РѕР±Р°РІРёС‚СЊ Circle
 			break;
 		}
 		case 'E': {
@@ -52,7 +52,7 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				break;
 			}
 			std::cout << " minor radius=" << minor_radius << " major radius=" << major_radius << "\n";
-			//TODO:Засунуть в результирующий вектор Ellipse
+			//TODO:Р”РѕР±Р°РІРёС‚СЊ Ellipse
 			break;
 		}
 		case 'H': {
@@ -62,7 +62,7 @@ vector<unique_ptr<IShape>> FileReader::readFromFile(const char* file_name)
 				break;
 			}
 			std::cout << " radius=" << radius << " step_for_helix=" << step_for_helix << "\n";
-			//TODO:Засунуть в результирующий вектор Helix
+			//TODO:Р”РѕР±Р°РІРёС‚СЊ Helix
 			break;
 		}
 		default:

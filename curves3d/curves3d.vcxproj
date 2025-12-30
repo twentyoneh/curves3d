@@ -124,11 +124,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="Ellipse.cpp" />
+    <ClCompile Include="Helix.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="FileReader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="Ellipse.h" />
     <ClInclude Include="FileReader.h" />
+    <ClInclude Include="Helix.h" />
     <ClInclude Include="IShape.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
