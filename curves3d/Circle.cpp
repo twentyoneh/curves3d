@@ -16,3 +16,8 @@ vector<float> Circle::getPoint(float t) const
 	float y_ = y + radius * sin(t);
 	return vector<float>{x_, y_, z};
 }
+
+float Circle::getRadius() const
+{
+	return radius;
+}
